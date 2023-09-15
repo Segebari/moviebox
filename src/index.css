@@ -1,0 +1,142 @@
+:root {
+  font-family: 'DM Sans', sans-serif;
+}
+ 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.logo-wrap {
+  align-items: center;
+}
+
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  padding: 1rem;
+  padding-left: 7rem;
+}
+
+
+.nav {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+
+.search {
+  width: 100%;
+  background: transparent;
+  border: solid #fff 1px;
+  border-radius: .3rem;
+  height: 2.25rem;
+}
+
+.search::placeholder {
+  color: #fff;
+  padding-left: 1rem;
+}
+
+.search-wrap{
+  width: 45%;
+  position: relative;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  right: 0;
+  padding-right: 1rem;
+}
+
+
+
+.sign-in {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.menu-bars {
+  display: grid;
+  place-items: center;
+  background-color: #BE123C;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.menu-bar {
+  margin-bottom: .3rem;
+  height: 1px;
+  width: 10px;
+  background-color: #fff;
+}
+
+.menu-bar:nth-child(2) {
+  margin-bottom: 0;
+}
+
+.nav-btns-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+
+.home {
+  color: #fff;
+  padding: 13rem 0rem 0rem 7rem;
+  width: 100%;
+  height: 37rem;
+  background-image: url(/public/assets/img/poster.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.home h1 {
+  font-size: 3rem;
+}
+
+
+.home-rating-wrap {
+  font-size: 0.75rem;
+}
+
+.rating-wrap {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+
+.home-movie-descrip {
+  padding-top: 1rem;
+  font-size: .875rem;
+}
+
+.home-trailer-btn {
+  align-items: center;
+  background-color: #BE123C;
+  width: fit-content;
+  padding: .4rem .7rem;
+  margin-top: .5rem;
+  border-radius: .3rem;
+  font-weight: 500;
+  gap: .5rem;
+}
