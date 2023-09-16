@@ -140,3 +140,36 @@ header {
   font-weight: 500;
   gap: .5rem;
 }
+
+
+
+/* Featured.css */
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
+  gap: 20px; /* Adjust the gap between movie cards */
+}
+
+.movie-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9; /* Background color for movie cards */
+}
+
+.movie-poster {
+  max-width: 100%;
+  height: auto;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.movie-release-date {
+  font-size: 1rem;
+  color: #777;
+}
