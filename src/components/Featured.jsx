@@ -1,3 +1,5 @@
+ // Featured.js
+
 import React, { useState, useEffect } from 'react';
 
 function Featured() {
@@ -5,7 +7,6 @@ function Featured() {
   const apiKey = 'c4a1a64fb3de49d2bb03df492eb77dcb'; // Your TMDB API Key
 
   useEffect(() => {
-    // Function to fetch top 10 movies
     const fetchTopMovies = async () => {
       try {
         const response = await fetch(
@@ -18,9 +19,8 @@ function Featured() {
 
         const data = await response.json();
 
-        // Check if data.results exists and is an array
         if (Array.isArray(data.results)) {
-          const topMovies = data.results.slice(0, 10); // Get the top 10 movies
+          const topMovies = data.results.slice(0, 10);
           setMovies(topMovies);
         } else {
           console.error('No results found or results is not an array:', data);
@@ -34,11 +34,13 @@ function Featured() {
   }, [apiKey]);
 
   return (
-    <div className="movie-grid">
+
+    <>
+      <div className="movie-grid">
       {movies.map((movie) => (
         <div key={movie.id} className="movie-card">
           <img
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
             alt={movie.title}
             className="movie-poster"
           />
@@ -47,6 +49,9 @@ function Featured() {
         </div>
       ))}
     </div>
+    
+    </>
+    
   );
 }
 
